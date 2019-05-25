@@ -1,0 +1,17 @@
+footer ul,nav ul{list-style:none;}
+footer li,nav li{display:inline-block;}
+body {text-align: center;}
+header,main,footer{margin:0 auto; width:700px;}
+h1{font-size:72px;}
+form{display:block;border:5px solid #3399ff;padding: 10px;position:relative;}
+input,textarea{display: block; margin-bottom: 10px;}
+textarea{width: 450px; height: 200px, letter-spacing: 2px, word-spacing: 30px;}
+button{position:absolute; bottom:10px;right:10px;}
+*{box-sizing: border-box;}
+.jcarousel li {width:450px; height:300px;float:left!important;}
+.picture{width:450px; height:300px;display:inline-block;background-repeat:no-repeat;background-position: center center; background-size: cover;}
+.hacking{background-image:url(../cit230/ponder-prove/images/hacking-1685092_960_720.jpg);}
+
+.jcarousel ul{padding: 0;}
+.creditcard{background-image:url(../cit230/ponder-prove/images/credit-card-1591492_960_720.jpg);}
+.jcarousel {width:450px;height:300px; margin: 0 auto; overflow:hidden;position: relative; }

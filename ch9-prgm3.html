@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Ch9-prgm 3</title>
+
+<script type="text/javascript">
+function doPayment(){
+      var principal = parseFloat(document.getElementById('principal').value);
+    var annualRate = parseFloat(document.getElementById('annualRate').value);
+    var years = parseFloat(document.getElementById('years').value);
+    var periodsPerYear = parseFloat(document.getElementById('periodsPerYear').value);
+    document.getElementById('outputDiv').innerHTML = computePayment(principal, annualRate, years, periodsPerYear);
+    
+    
+}
+    function computePayment(a, ar, y, t)
+    {
+        var a;
+        var ar;
+        var r = ar/t;
+        var y;
+        var t;
+        var n = y * t;
+        
+        var p = (a * r)/ (1- Math.pow(1+ r, -n));
+        var round = Math.round(p*100)/100;
+        return round;
+        
+        
+    }
+    
+function doBalance(){
+      var principal = parseFloat(document.getElementById('principal').value);
+    var annualRate = parseFloat(document.getElementById('annualRate').value);
+    var years = parseFloat(document.getElementById('years').value);
+    var periodsPerYear = parseFloat(document.getElementById('periodsPerYear').value);
+    var PaidToDate = parseFloat(document.getElementById('PaidToDate').value);
+document.getElementById('outputDiv2').innerHTML = computeBalance(principal, annualRate, years, periodsPerYear, PaidToDate);
+    
+}
+
+function computeBalance(a, ar, y, t, pd)
+    {
+        /* t = periods*/
+        
+        var r = ar/t;
+        
+        var p = computePayment(a, ar, y, t, p);
+        var n = y * t;
+      var b = a* Math.pow(1+ r, pd) - p * (Math.pow(1+ r,pd) - 1)/r;
+        var round = Math.round(b*100)/100;       
+        return round;
+        
+        
+    }
+    
+    
+    function reset(){
+        document.getElementById('principal').value = " ";
+        document.getElementById('annualRate').value = " ";
+        document.getElementById('years').value = " ";
+        document.getElementById('periodsPerYear').value = " ";
+        document.getElementById('outputDiv').innerHTML = " ";
+         document.getElementById('PaidToDate').value = " ";
+        document.getElementById('outputDiv2').innerHTML = " ";
+       
+        
+        
+    }
+</script>
+</head>
+
+<body>                               
+Principal:<input type="text" id="principal">
+    <br>
+annualRate:<input type="text" id="annualRate">
+    <br>
+    Years:<input type="text" id="years">
+    <br>
+    periodsPerYear:<input type="text" id="periodsPerYear">
+    
+    <br>
+<button   onclick="doPayment()">Compute Future Value</button>  
+    <br>
+<div id="outputDiv"></div>
+    <br>
+     Paid To date:<input type="text" id="PaidToDate">
+    <br>
+    <button onclick="doBalance()">Balance</button>
+    <br>
+    <div id="outputDiv2"></div>
+    <br>
+    <button onclick="reset()">Reset</button>
+</body>         
+</html>

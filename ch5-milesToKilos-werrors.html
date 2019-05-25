@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Miles to Kilometers</title>
+
+<script type="text/Javascript">
+function  MTK(){
+	// Get the text that the user typed into
+	// the miles text field in the distance form.
+	var input = document.getElementById("miles").value;
+
+	// Convert the user supplied text into a number
+	// and store the number in the variable miles.
+	var miles = parseFloat(input);
+
+	// Multiply the miles by the conversion factor
+	// and store the result in the variable kilos.
+	var kilos = miles * 1.609344;
+	kilos = Math.round(kilos * 100)/100;
+
+	// Display the results in the kilometers
+	// text field in the distance form.
+	document.getElementById('kilometers').value = kilos;
+}
+</script>
+</head>
+
+<body>
+	
+		Enter miles <input type="text" id="miles"><br>
+		<button type="button" onclick='MTK()'>
+			Convert</button><br>
+		Kilometers <input type="text" id="kilometers">
+	
+</body>
+</html>

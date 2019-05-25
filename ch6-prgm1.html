@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head> <meta charset= "utf-8">
+<title> Weather </title>
+<script type="text/javascript">
+
+ function(show shoes) {
+ /*
+ Input: Weather, button click. 
+ Output: shoe type
+ Processing: If hot, sandals, rain boots and snow boots. all else shoes. 
+ */
+ 
+ var hot = document.getElementById('outputDiv').innerHTML;
+ var rain = document.getElementById('outputDiv').innerHTML;
+ var snow = document.getElementById('outputDiv').innerHTML;
+ 
+ if (hot) {
+ document.getElementById('outputDiv').innerHTML= "sandals";
+ }
+ else if (rain) {
+ document.getElementById('outputDiv').innerHTML = "galoshes";
+ }
+ else if (snow){
+ document.getElementById('outputDiv').innerHTML = "boots";
+ }
+ else { 
+ document.getElementById('outputDiv').innerHTML = "shoes";
+ }
+ </script>
+ </head>
+ <body>
+ 
+ <input type="text" id="snow shoes">
+
+ 
+<button type="button" id="button" onclick="check()"> Shoes </button>
+<div id ="outputDiv"></div>
+</body>
+
+</html>
+ 

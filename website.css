@@ -1,0 +1,110 @@
+footer ul,nav ul{list-style:none;}
+footer{clear:both;}
+footer li,nav li{display:inline-block;}
+body {text-align: center;background-color:black;font-family:monospace;}
+header,main,footer{margin:0 auto; width:700px;background-color:black;}
+h1 img{vertical-align:middle;}
+h1{font-size:72px;color:blue;font-family:sans-serif;}
+p{color:white}
+form{display:block;border:5px solid #3399ff;padding: 10px;position:relative;}
+input,textarea{display: block; margin-bottom: 10px;}
+textarea{width: 450px; height: 200px; letter-spacing: 2px; word-spacing: 30px;}
+button{position:absolute; bottom:10px;right:10px;}
+*{box-sizing: border-box;}
+.picture{background-position: center center; background-size: cover;}
+.hacking{background-image:url(../cit230/ponder-prove/images/hacking-1685092_960_720.jpg);}
+.creditcard{background-image:url(../cit230/ponder-prove/images/credit-card-1591492_960_720.jpg);}
+
+
+a:link, a:active, a:visited {color:limegreen;
+    
+}
+a:hover {
+    color:limegreen;
+}
+
+
+.slider {
+    position:relative;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.frame {
+    /**
+     * (optional) wrapper width, specifies width of the slider frame.
+     */
+    width: 600px;
+
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    z-index: 9;
+}
+
+.slides {
+    display: inline-block;
+    padding: 0;
+    width: 600px;
+    height: 400px;
+}
+
+.slider li {
+    position: relative;
+    display: inline-block;
+
+    /**
+     * (optional) if the content inside the slide element has a defined size.
+     */
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: block;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.next svg, .prev svg {
+    width: 25px;
+}
+
+.Leftbox,.Rightbox{width:30%;margin:20px;padding:20px;}
+.Leftbox{float:left;}
+.Rightbox{float:right;}
+#why{display:flex;}
+.reason{flex:1; height:300px;background-position: center center; background-size: cover;position:relative;}
+.reason a{position:absolute; bottom:0;display:block;width:100%;text-align:center;background-color:black}
+.car{background-image:url(../cit230/ponder-prove/images/cadillac-hacked%20car.jpg)}
+.medical{background-image:url(../cit230/ponder-prove/images/medical.jpeg)}
+.identity{background-image:url(../cit230/ponder-prove/images/stalker.jpg)}
+.blog{display:flex;}
+.blog-entry{flex:1;}
+h2{color:blue;height:50px;}
+.blog-entry img{width:100%;height:400px;}
+dl{color:white;text-align:left;}
+dd{margin-bottom:1em;}
+.container{display:flex; height:300px;color:white;}
+.container div{flex:1;flex-grow:2;position:relative;}
+.container div:first-child, .container div:last-child{flex-grow:1;border:1px solid limegreen;}
+.container ul{padding-left:0;display:inline-block;margin:0 auto;margin-bottom:100px;}
+.container ul + a:last-child{position:absolute; bottom:16px; right:16px;}

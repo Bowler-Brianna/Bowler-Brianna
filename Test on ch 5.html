@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+    <head>
+        <title>Algorithm</title>
+        <meta charset="utf-8">
+        <script language="JavaScript">
+ 
+function algorithm()
+{
+    var liters, quarts;
+    quarts = parseFloat (document.formulario.quarts.value);
+    liters=quarts/4.0*3.785411784;
+    document.formulario.liters.value = liters;
+}
+ 
+        </script>
+    </head>
+    <body>
+        <form name="formulario">
+            <table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="1" cellspacing="1">
+                <tbody>
+                    <tr><td>Enter value of quarts</td><td><input name="quarts"></td></tr>
+                    <tr align="center"><td colspan="2" rowspan="1"><input value="Process" type="button" onclick="algorithm();">
+                        <input type="reset"></td></tr>
+                    <tr><td>Value of liters</td><td><input name="liters"></td></tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

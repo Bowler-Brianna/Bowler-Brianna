@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Prime Number</title>
+
+<script type="text/javascript">
+/* Input: 
+ * Processing: 
+ * Output: 
+ */
+ function tableness(){
+            var output = "\n";
+           for(var i = 1; i <= 12; i++){
+            output += "5 x  "+ i + " = " + (5 * i) + "\n";
+               
+            }
+           document.getElementById('output').innerHTML = output; 
+        }
+    </script>
+    </head>
+ 
+ 
+ 
+<body>
+ Let's make a table- Press the "Make Table" button for MAGIC:  
+<button type="button" onclick="tableness()">Make Table </button>  
+<textarea id="output" rows="13" cols="40"></textarea>
+<div id="output"></div>  
+</body>
+</html>

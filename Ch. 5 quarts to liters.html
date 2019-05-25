@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+
+<head>
+<meta charset="utf-8">
+    <title>convert quarts to liters</title>
+    <script>
+        function convert() {
+            /* Input: Qaurts
+            Process: Qaurts * 0.946353
+            output: Liters
+            
+            */
+            
+            var q = document.getElementById('qrts').value;
+            n = q * 0.946353;
+            l = n;
+            round =Math.round(l * 100)/100; 
+            document.getElementById('liters').innerHTML = l;
+
+
+        }
+    </script>
+</head>
+
+
+
+
+
+
+<body>
+    Qaurts:
+    <input type="text" id="qrts">
+    <input type="submit" onclick="convert()">
+    <br> Liters:
+    <div id="liters"></div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>prgrm6-2</title>
+   
+    <script type="text/javascript">
+        /*input: x operator y response button click
+        process: Switch for the operator and else if statement to find if th x + operator + y = ans
+        output: incorrect or correct answer
+        */
+        function check() {
+            var one= document.getElementById('one').value;
+            var operator= document.getElementById('op').value;
+            var  two= document.getElementById('two').value;
+           var ans = document.getElementById('ans').value;
+            var num1 = parseFloat(one);
+            var num2 = parseFloat(two);
+            var correct
+            switch(operator){
+                    case '+':
+                    correct = num1 + num2;
+                    break;
+                case '-':
+                    correct = num1 - num2;
+                    break;
+                case '*':
+                    correct = num1 * num2;
+                    break;
+                case '/':
+                    correct = num1 / num2;
+                    break;
+                default:
+                    correct = null;
+                    break;
+                    
+                    
+            }
+            if (correct == ans){
+                document.getElementById('output').innerHTML = "Correct! Good job.";
+            }
+            else {
+                 document.getElementById('output').innerHTML = "Incorrect. Try again!";
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+<h1>Test your math skills</h1>
+    <input type="text" id="one">
+<input type="text" id="op" value= "+">
+    <input type="text" id="two">
+    =
+    <input type="text" id="ans">
+
+<div id="output"></div>
+    <p id="total"></p>
+    <p id ="Amount"></p>
+    <button onclick="check()" >Calculate</button>
+</body>
+
+</html>

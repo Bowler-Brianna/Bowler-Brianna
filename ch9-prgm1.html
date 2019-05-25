@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Ch9 Prgm 1</title>
+
+<script type="text/javascript">
+function doInputOutput(){
+    var t= parseFloat(document.getElementById('temperature').value);
+    
+    var s= parseFloat(document.getElementById('windspeed').value);
+    var ans = windChill(t, s);
+    var anss = Math.round(windChill(t, s) * 100)/ 100;
+    document.getElementById('outputDiv').innerHTML = anss;
+    document.getElementById('outputDiv').style.fontSize = "150px";
+     document.getElementById('outputDiv').style.fontFamily= "fantasy";
+}
+function windChill(t, s){
+ var t;
+    var s;
+    var p = Math.pow(s, 0.16);
+    var f = 35.74 + (0.6215 * t) - (35.75 * p) + ((0.4275 * t) * p);
+    return f;
+}
+
+    
+</script>
+</head>
+
+<body>                               
+Temperature:<input type="text" id="temperature">
+    <br>
+WindSpeed:<input type="text" id="windspeed">
+    <br>
+<button   onclick="doInputOutput()">Wind Chill</button>  
+    <br>
+<div id="outputDiv"></div>
+</body>         
+</html>

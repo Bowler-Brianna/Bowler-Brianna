@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Ch10-prgm 4</title>
+
+<script type="text/javascript">
+function fillNum(){
+var list = new Array( 17, 8, 9, 20);
+var x = parseInt(document.getElementById('multiplier').value);
+var total = multiply(list,x);
+document.getElementById('price').innerHTML = total;
+}
+
+function multiply(list, multiplier) {
+var total = "";
+for (var i = 0; i < list.length; i++) {
+list[i] *= multiplier;
+}
+return list;
+}
+</script>
+</head> 
+
+
+<body>                               
+Multiplier: <input type="text" id="multiplier">
+	<button onclick="fillNum()">Fill Numbers</button>  
+<div id="price"></div>
+</body> 
+</html>

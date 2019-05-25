@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Ch10-ex 18</title>
+
+<script type="text/javascript">
+
+// The values in these arrays can be hard coded
+// into your program, or even better, they can
+// be read from a file or a database.
+var limits = [ 300, 600, 1000 ];
+var rates = [ 0, 0.02, 0.025, 0.03 ];
+
+function twentyOne(hand) { 
+var input = parseFloat(document.getElementById("Input").value); 
+document.getElementById('output').innerHTML = "$" + getDiscountedAmount(input);} 
+
+
+// Computes and returns a discounted purchase amount.
+function getDiscountedAmount(purchase) {
+    for (var i = 0;  i < limits.length;  ++i) {
+        if (purchase < limits[i]) {
+            break;
+        }
+    }
+    var rate = rates[i];
+    var discount = purchase * rate;
+    return purchase - discount;
+	}
+	</script>
+	</head>
+	<body>
+	What is the Purchase Amount? <input type="text" id = "Input">
+	<button onclick="twentyOne()">Go Amount with Discount (if available)</button> 
+	<div id="output"></div>

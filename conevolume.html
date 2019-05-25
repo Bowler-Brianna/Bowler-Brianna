@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Triangle Area</title>
+
+<script type="text/javascript">
+/* Input: No user input
+ * Processing: Compute the area of a triangle
+ *     with side lengths 4, 2, and 5
+ * Output: The area of the triangle
+ */
+function coneVolume(radius,height) {
+    var r = triangleArea(4, 2, 5);
+    document.getElementById('outputDiv').innerHTML = r;
+}function triangleArea(a, b, c) {
+    var s = (a + b + c) / 2;
+    var area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
+    return area;
+}
+</script>
+</head>
+
+<body>
+<button type="button" onclick="coneVolume()">Test</button>
+<div id="outputDiv"></div>                          
+</body>           
+</html>

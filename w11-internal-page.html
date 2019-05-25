@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="website.css">
+    </head>
+<body>
+ <header>
+        <h1>Ensure Secure</h1>
+     
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3uLo5Gk7Z6Fwh8iRXwVD40gb0BdJVia8&callback=myMap"></script>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="why-security.html">Why Security</a></li>
+                <li><a href="FAQ.html">FAQs</a></li>
+                <li><a href="Best-Practices.html">Best Practices</a></li>
+                <li><a href="Scans.html">Get a Scan</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="map" style="width:50%;height:300px"></div>
+     <script>
+         function myMap() {
+                    var myCenter = new google.maps.LatLng(37.234894,-115.81082); 
+                    var mapCanvas = document.getElementById("map");
+                    var mapOptions = {
+
+                        center:new google.maps.LatLng(37.234894,-115.81082),
+                        zoom: 5,
+                        panControl: true,
+                        zoomControl: true,
+                        mapTypeControl: true,
+                        scaleControl: true,
+                        streetViewControl: true,
+                        overviewMapControl: true,
+                        rotateControl: true
+                    };
+                    var map = new google.maps.Map(mapCanvas,mapOptions);
+                    var marker = new google.maps.Marker({
+                        position: myCenter
+                    });
+                    marker.setMap(map);
+
+
+                    // Zoom to 9 when clicking on marker
+                         google.maps.event.addListener(marker, 'click', function () {
+                        var pos = map.getZoom();
+                        map.setZoom(9);
+                        map.setCenter(marker.getPosition());
+                        window.setTimeout(function(){
+                            map.setZoom(pos);
+                        }, 3000);
+                    });
+                }
+            </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3uLo5Gk7Z6Fwh8iRXwVD40gb0BdJVia8&callback=myMap"></script>
+
+    <main>
+    <h2>Contact us:</h2>
+        <form>
+        <input type="text" placeholder="Enter Name Here">
+            <input type="text" placeholder="Enter Phone Number Here">
+            <input type="email" placeholder="Enter Email Here">
+            <textarea placeholder="Please write your questions/comments below."></textarea>
+            <button>Submit</button>
+        
+        
+        </form>
+ <p>Brianna Hales
+208-345-6789
+<a href="mailto:contact@ensuresecure.net">contact@ensuresecure.net</a>
+222 North 333 S Apt 444 Idaho Falls, Idaho 55555</p>
+    </main>
+    <footer>
+    <ul>
+        <li><a href="indv-website/about-us.html">About Us</a></li>
+        <li><a href="indv-website/contact-us.html">Contact Us</a></li>
+        <li><a href="cit230-links.html"> CIT230-links (Link)</a></li>
+        </ul>
+    </footer>
+
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head><title>ch.5 programming assignement</title> 
+
+
+<meta charset="utf-8">
+ <script>
+    function mlg(){
+        var b = document.getElementById('bod').value;
+        var e= document.getElementById('eod').value;
+        var g = document.getElementById('gas').value;
+        
+        var beginodo = parseFloat(b);
+        var endinodo = parseFloat(e);
+         var gallons = parseFloat(g);
+        
+        var miles = beginodo - endinodo;
+        
+        var mileage = miles / gallons;
+        document.getElementById('m').innerHTML = mileage;
+        
+    }
+    
+    </script>
+
+    </head>
+
+
+
+
+<body>
+     
+      Ending Odometer:<input type='text' id="eod"> 
+    <br>
+Beginning Odometer: <input type='text' id="bod">
+    <br>
+     Gallons: <input type='text' id="gas">
+    <br>
+    <input type='submit' onclick="mlg()">
+    <br>
+    Mileage of Vehicle:<p id="m"></p>
+    
+   
+    </body>
+
+
+
+
+</html>

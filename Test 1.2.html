@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+
+<head>
+<meta charset="utf-8">
+    <title>Vol of a tetrahedron</title>
+    <script type="text/javascript"> 
+	
+        function computeVolume () {
+            /* Input: v and a
+            Process: (l * l * l) / (6 * Math.SQRT2)
+            Process: (l * l * l) / (6 * Math.SQRT2)
+            output: volume
+            
+            */
+            
+            var l = document.getElementById('length').value;
+			
+	
+			var length = parseFloat(l);
+		
+            var allsides = l * l * l;
+            var computeVolume = allsides / Math.SQRT2 * 6;
+			
+            document.getElementById('computeVolume').innerHTML = computeVolume;
+
+
+        }
+    </script>
+</head>
+
+
+
+
+
+
+<body>
+     <h1>Volume of a Tetrahedron</h1>
+    length <input type="text" id="length"><br>
+   <button type="button" onclick="computeVolume()">Volume</button><br>
+    Volume <div id="computeVolume"></div>
+</body>
+
+</html>

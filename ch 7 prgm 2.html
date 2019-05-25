@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>prgrm7.2</title>
+  
+    <script type="text/javascript">
+        /*
+        Input: Customer subtotal
+        Process: if subtotal > 50 && (dayOfWeek == 2 || dayOfWeek == 3){ total =  subtotal - (.1 * subtotal)} 
+        Output: total amount=  sales = total + (.06 * total);
+        */
+		
+        function compute() {
+            var c= document.getElementById('credits').value;
+          var subtotal = parseFloat(c);
+           var dayOfWeek = new Date().getDay();
+
+            var  total;
+            if (subtotal > 50 && (dayOfWeek == 2 || dayOfWeek == 3)){ 
+                total = subtotal - (.1 * subtotal);
+            }
+          else{ 
+          total = subtotal;
+              
+          }  
+
+            document.getElementById('output').innerHTML = total + (total * .06);
+
+        }
+    </script>
+</head>
+
+<body>
+
+
+<input type="text" id="credits">
+
+    <div id="output"></div>
+    
+    <button onclick="compute()" >Total</button>
+</body>
+
+</html>

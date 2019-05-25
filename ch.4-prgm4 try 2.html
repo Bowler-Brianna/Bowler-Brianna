@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+<head><title>ch4-pgrm4.html</title>
+    
+    <script>
+    function addressit(){
+        var name = document.getElementById('name');
+        var street = document.getElementById('street');
+        var city = document.getElementById('city');
+        var state = document.getElementById('state');
+        var zip = document.getElementById('zip');
+        var p = document.getElementById('p');
+        
+        var address = name.value + "<br>" + street.value + "<br>" + city.value + "<br>" + state.value + "<br>" + zip.value + ".";
+        p.innerHTML = address;
+        
+    }    
+
+    </script>
+    
+    <style> p{ margin-left:400px; margin-top:-30px; font-size:90px;}
+        
+        p:hover{animation: ro 1s infinite; animation-direction: alternate;}
+        @keyframes ro{
+            0%{transform: rotateY(0deg);}
+            100%{transform: rotateY(360deg);}
+            
+        }
+    
+    
+    </style>
+    
+    
+    </head>
+
+<body>
+    
+    Name: <input type= "text" id ="name">
+    <br>
+    Street: <input id ="street">
+    <br>
+    City: <input id ="city">
+    <br>
+    State: <input id ="state">
+    <br>
+    Zip code: <input id ="zip">
+    <br>
+    <button id="make" onclick="addressit()">Address</button>
+    <p id="p"></p>
+    </body>
+</html>

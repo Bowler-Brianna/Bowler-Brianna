@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head><title>ch5.prgm6.html</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+function ComputeNetPay(){
+var Wage= parseFloat(document.getElementById('Wage').value);
+var Hours= parseFloat(document.getElementById('Hours').value);
+
+var gross= Wage * Hours;
+var tax = .15 * gross;
+var net= gross  - tax;
+document.getElementById('NetPay').innerHTML="$" + net;
+}
+</script>
+
+</head>
+
+<body>
+Wage: <input type="text" id="Wage" size="8"> <br>
+Hours: <input type="text" id="Hours" size="8"> <br>
+<button type="button" onclick="ComputeNetPay()">Compute Net Pay </button><br>
+Net Pay: <div id="NetPay"></div>
+
+</body>
+</html>

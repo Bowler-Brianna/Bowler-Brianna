@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head> <meta charset= "utf-8">
+<script type="text/javascript">
+
+function check(){
+/*
+Input: Cost of home.
+Process:
+if $0 – $49,999.99 5% * cost
+else if $50,000 – $99,999.99 $2,000 + 10% * (cost − $50,000)
+else if $100,000 – $199,999.99 $7,500 + 20% * (cost − $100,000)
+else $200,000 – ∞ $27,500 + 25% * (cost − $200,000)
+Output: Down Payment
+
+*/
+    var c = document.getElementById('one').value;
+    var cost = parseFloat(c);
+	if (cost < 50000){
+ document.getElementById('outputDiv').innerHTML = "The cost of your property is " 
+ + cost + " and the down payment is " 
+ + (Math.round(.05 * cost)*100)/100;
+ 
+
+	}
+	else if (cost < 100000) { 
+ document.getElementById('outputDiv').innerHTML= "The cost of your property is" 
+				+ cost + "and the down payment is" 
+				+ (Math.round (2000 + .10 * (cost - 50000))* 100)/100;
+	}
+	else if (cost < 200000) {
+ document.getElementById('outputDiv').innerHTML = "The cost of your property is " 
+				+ cost + " and the down payment is " 
+				+ (Math.round (7500 + .20 * (cost - 100000))* 100)/100;
+	}
+	else {
+ document.getElementById('outputDiv').innerHTML = "The cost of your property is " 
+				+ cost + " and the down payment is " 
+				+ (Math.round (27500 + .25 * (cost - 200000))* 100)/100;
+	}
+}
+</script>
+</head>
+
+<body>
+
+<input type="text" id="one">
+
+ 
+<button type="button" id="button" onclick="check()"> check </button>
+<div id ="outputDiv"></div>
+</body>
+
+</html>

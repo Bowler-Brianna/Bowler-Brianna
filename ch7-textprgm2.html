@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head> <meta charset= "utf-8">
+<title> Ch 7 textprgm2 </title>
+<script type="text/javascript">
+
+ function days() { 
+ /*
+ Input: Month name 
+ Output: # of days in the month
+ Processing: assign days to each month using if, else statements. 
+ 31 days : January, March, May, July, August, October, December
+ if(input - January|| input==March etc..output 31 days
+ else if feburary 28 or 29 days 
+ else output 30 days
+ */
+ 
+ var month = document.getElementById("month").value;
+ var days;
+ 
+ if (month == "February") { 
+days = "28 or 29 days";
+ }
+ else if (month == "April"|| month == "June" || month == "November"|| month == "September") {
+ days = "30";
+ }
+ 
+ else { 
+ days = "31";
+ }
+ document.getElementById('outputDiv').value = days;
+ } 
+ </script>
+ </head>
+ <body>
+ 
+ Enter the Month:<input type="text" id="month">
+
+ 
+<button type="button" onclick="days()"> Days </button>
+<input type ="text" id ="outputDiv">
+</body>
+
+</html>
+ 

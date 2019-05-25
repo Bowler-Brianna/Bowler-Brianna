@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Test3 num2</title>
+
+<script type="text/javascript">
+
+function makeLocation(city, state, zip){
+
+	 city = document.getElementById("city").innerHTML;
+	state = document.getElementById("state").innerHTML;
+	zip = document.getElementById('zip').innerHTML;
+	document.getElementById('outputDiv').innerHTML= makeLocation(city, state, zip);
+
+	
+    }
+
+</script>
+</head>
+
+<body>     
+City <input type="text" id="city"> <br>
+State<input type="text" id="state" >   <br>
+Zip code: <input type="text" id="zip"> <br>       
+
+<button type="button" onclick="makeLocation()">Generate Address</button>
+<div id="outputDiv"></div>
+</body>         
+</html>

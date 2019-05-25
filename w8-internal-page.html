@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>index.html</title>
+    <link rel="stylesheet" href="w8-style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jcarousel/0.3.5/jquery.jcarousel.min.js"></script>
+    <script>
+   (function($) {
+    $(function() {
+        $('.jcarousel').jcarousel();
+
+        $('.jcarousel-control-prev')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '-=1'
+            });
+
+        $('.jcarousel-control-next')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '+=1'
+            });
+
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'a', function() {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function() {
+                $(this).removeClass('active');
+            })
+            .jcarouselPagination();
+    });
+})(jQuery); 
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Ensure Secure</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="indv-website/why-security.html">Why Security</a></li>
+                <li><a href="indv-website/FAQ.html">FAQs</a></li>
+                <li><a href="indv-website/Best-Practices.html">Best Practices</a></li>
+                <li><a href="indv-website/Scans.html">Get a Scan</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="jcarousel">
+    <ul>
+        <li><span class="picture hacking"></span></li>
+        <li><span class="picture creditcard"></span></li>
+    </ul>
+        </div>
+            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                
+                <p class="jcarousel-pagination">
+                    
+                </p>
+    <p>Add in a call to action here so people will want to stay on my site.</p>
+    </main>
+    <footer>
+    <ul>
+        <li><a href="indv-website/about-us.html">About Us</a></li>
+        <li><a href="indv-website/contact-us.html">Contact Us</a></li>
+        <li><a href="cit230-links.html"> CIT230-links (Link)</a></li>
+        </ul>
+    </footer>
+
+  
+</ol>
+</body>
+</html>
